@@ -13,6 +13,7 @@ Sky130 PDK (Process Design Kit)➡️ is an open-source PDK provided by SkyWater
 . It is based on SkyWater's 130nm CMOS technology and offers designers worldwide free access to chip design technology to create manufacturable designs4
 
 ## Inception of open-source EDA, OpenLANE and Sky130 PDK
-<img src="https://github.com/user-attachments/assets/e6fea6c2-2fff-4e34-a903-e2eb62df4246" width="700" height="500">
-<p align="center">
+![core and die](https://github.com/user-attachments/assets/2ca224f5-e409-45c3-89be-0999db08200a)
+
+
 

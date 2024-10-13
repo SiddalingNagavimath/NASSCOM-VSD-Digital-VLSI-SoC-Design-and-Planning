@@ -16,5 +16,5 @@ Sky130 PDK (Process Design Kit)➡️ is an open-source PDK provided by SkyWater
 ![core and die](https://github.com/user-attachments/assets/2ca224f5-e409-45c3-89be-0999db08200a)
 ![Screenshot (34)](https://github.com/user-attachments/assets/8ab89589-2d39-43d7-b621-51d70e265a73)
 ![screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(5).png)
-Concept_Corner/Screenshot (94).png
+
 

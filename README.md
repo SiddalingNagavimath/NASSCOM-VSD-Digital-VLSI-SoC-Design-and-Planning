@@ -1,7 +1,7 @@
 # NASSCOM-VSD-Digital VLSI SoC Design and Planning
 ## Open-source EDA, OpenLANE and Sky130 PDK
 ## Introduction
-<p align="justify">
+
 
   Open-Source EDA (Electronic Design Automation)➡️ refers to the movement towards making EDA tools and resources freely available to the public. This democratizes access to advanced design tools, allowing everyone to make use of it 
 
@@ -56,16 +56,16 @@ exit
 ![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/VirtualBox_vsdworkshop_08_10_2024_23_58_23.png)
 ![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/VirtualBox_vsdworkshop_09_10_2024_00_01_18.png)
 ![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/cell_level%20lef%20info.png)
-
-Calculating Flop_Ratio(D_flipflpo):-
-  total no.of cells=14876 
-  no.of d_ff=1613
-  flop_ratio=(1613/14876)=0.1084296853993009
-  Percentage= flop_ratio*100=10.84296853993009%
-  
-![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/dff%20flop%20ratio.png)
-![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/dff%20flop%20ratio%20ans.png)
 ![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/pdk%20used%20by%20run%20etc.png)
+
+## Calculating Flop_Ratio(D_flipflop):-  
+![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/dff%20flop%20ratio.png)
+![core and die](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_1/dff%20flop%20ratio%20ans.png)                     
+
+**total no.of cells**=14876                                                                 
+**no.of d_ff**=1613                                                                     
+**flop_ratio**=(1613/14876)=0.1084296853993009                                        
+**Percentage**= flop_ratio*100=10.84296853993009%
 
 
 

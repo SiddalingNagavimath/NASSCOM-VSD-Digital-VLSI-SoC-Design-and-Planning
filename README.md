@@ -81,15 +81,26 @@ exit
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(54).png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(55).png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(57).png)
+![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/incre_or_decree%20in%20size%20of%20ioplacecell.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/Global%26local%20variable%20in%20readme.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/core%20utl%20overriden%20by%20pdk%20specific%20configtcl.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/def%20file%20of%20floorplan.png)
 
 ### Floorplan Def file gives the values of ..                                                  
-Die width in Distance=660685-0=660685                                                         
-Die height in Distance=671405-0=671405
+Die width in units=660685/1000=660.685 (in microns)                                           
+Die height in units=671405/1000=671.405                                                       
+//let's find the Area                                                   
+Area of Die = 660.685*671.405 = 443587.212425 square microns
 
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/floorplan%20variable.png)
+
+```
+//Change directory to newly generated floorplan def file
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-10_06-41/results/floorplan/
+
+// command to run floorlan def file in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/Magic%20opening.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/magic%20placement.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/magic_io_metal.png)
@@ -100,13 +111,67 @@ Die height in Distance=671405-0=671405
 
 
 ### DAY_3
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/incre_or_decree%20in%20size%20of%20ioplacecell.png)
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/op%20of%20size%20ioplace.png)
+```
+//Command to run in openlane working flow
+run_placement
+```
+```
+// change directory to newly generated placement file in another terminal
+cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-10_06-41/results/placement/
+
+// command to run placement def fie in magic tool
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+
+```
+![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/placement%20def%20in%20magic.png)
+```
+command to exit in the openflow
+exit
+exit
+```
+Cloning the custom inverter standard cell design from github repo
+```
+change directory to openlane
+cd Desktop/work/tools/openlane_working_dir/openlane
+
+enter command to clone github repo
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+after cloning change directory
+cd vsdstdcelldesign
+
+copying the Magic tech file in vsdstdcelldesign
+cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech 
+
+command to open custom inverter design in magic tool
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/layout%20for%20cmos%20inverter%20by%20git%20clone.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/location%20of%20n%26p%20mos%20in%20cmos.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/show%20what%20s%20layout%20and%20lef.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/ext2spice%20file%20creation.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/circuit%20for%20inv_ext%20file.jpeg)
+
+#Spice extraction of inverter in Magic
+Commands to run in tkcon terminal of magic tool
+```
+command to check directory in which you are present
+pwd
+
+command to run for extraction of file to .ext format
+extract all
+
+command to enable parasitic Extraction
+ext2spice cthresh 0 rthresh 0
+
+command to convert ext to spice file format
+ext2spice
+```
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/ext%20and%20spice%20file%20create.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/gitclone.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/copied%20from%20magic%20(sky130a).png)
@@ -136,9 +201,90 @@ Die height in Distance=671405-0=671405
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/ngspice%20input.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/values%20obtained%20from%20ngspice.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/output%20vs%20time%20in%20transition.png)
+
+```
+# Rise transition time calculation
+Rise transition time = time taken for o/p to rise to 80% - time taken for i/p to rise to 20%
+20% of output = 660mV 
+80% of output = 2.64
+```
+
+# 20% Screenshots
+![314002633-261c420f-219f-4c26-ae32-6c0db82a722e](https://github.com/user-attachments/assets/487b7b0c-c147-4e63-9720-319fe4f3d206)
+![314004259-bbb078c4-b3aa-436b-8832-23e5d7777081](https://github.com/user-attachments/assets/50ad862b-3b5e-446d-b376-719415dc38a9)
+
+# 80% Screenshots
+![314005593-d10a0ff1-0523-4fe4-96f4-eefc63f647f7](https://github.com/user-attachments/assets/df736a2f-2815-49a1-b96f-9017e6365f70)
+![314005616-929042ad-2032-49aa-ae07-2a2163b9603e](https://github.com/user-attachments/assets/b7d40f73-5f07-4f72-9a81-6b2a3c21587e)
+
+Rise transition time =2.24638-2.18242=0.06396ns=63.96ps  
+
+```
+# Fall transition time calculation
+Fall transition time = Time taken for output to fall to 20% - Time taken for output to fall to 80%
+
+```
+![314009074-0180052c-4b8c-4bd8-928c-cd8ab34d5a17](https://github.com/user-attachments/assets/cdfa26ea-0499-42c2-b047-1d19f1f392a5)
+![314009104-83760cf7-18c9-45d1-8063-04baafe1dd1f](https://github.com/user-attachments/assets/492503ce-714e-4773-ba21-b2440c600324)
+![314009811-7bc0eeee-c7cd-464e-a90b-cac8d4f83144](https://github.com/user-attachments/assets/fb2bdd0b-4435-4bd3-be76-a2d89468e57e)
+![314009833-9a7dc3b0-9936-4704-97cd-1cd03cc6a8cb](https://github.com/user-attachments/assets/34ab4ef6-ddd0-438a-bda2-c968bc80e6d5)
+
+Fall transition time = 4.0955-4.0536=0.0419ns=41.9ps 
+
+```
+# Rise Cell Delay Calculation
+
+Rise cell delay=Time taken for output to rise to 50% - Time taken for input to fall to 50%
+```
+50% of 3.3 V =1.65 V
+
+50% Screenshots
+![314018565-e34363cd-a70f-4939-b8e5-efb10620ce93](https://github.com/user-attachments/assets/e592a4d2-ecb8-4b88-a9cb-5a2c5cf3f0d7)
+![314018583-f7452b60-3612-4bcf-a71d-b8ff021d5297](https://github.com/user-attachments/assets/3a965710-8d86-4511-8359-ce3f68f84f15)
+
+Rise cell delay =2.21144-2.15008=0.06136ns=61.36ps 
+
+```
+Rise cell delay=Time taken for output to fall to 50% - Time taken for input to rise to 50% 
+```
+50% Screenshots
+![314020455-3d2ff2e5-dab6-497a-b5a4-74959f69c2a2](https://github.com/user-attachments/assets/85c3ac09-2cad-4e22-9126-d040f7bc1e69)
+![314020467-aa88c26b-0cc4-4cf7-80d7-b2058e8fbc47](https://github.com/user-attachments/assets/76894af9-8929-48b3-bee3-75201e824c6b)
+
+Fall Cell Delay = 4.07-4.05 = 0.02 ns = 20 ps
+
+
+
+
+
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/magic%20file%20created.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/met3_mag%20file%20opening.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/load%20poly.png)
+![315561187-acfbcf69-020e-4b62-96bd-b7630aa74ef0](https://github.com/user-attachments/assets/bb8c07a6-ee92-4d5b-a209-224975a4b3d7)
+![315578575-a05bd29a-b181-4e26-826a-d32f12696b2c](https://github.com/user-attachments/assets/54802cac-68ba-4b7c-8c7a-fb24a9ee655d)
+
+commands to run in tkcon
+```
+# command to load updated tech file
+tech load sky130A.tech
+
+# Must re-run drc check to see updated drc error
+drc check
+
+# Selecting region displaying the new errors and getting the error messages
+drc why
+```
+
+
+
+
+
+
+
+
+
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/poly.9%20touching%20illegal%20because%20alldif.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/poly%20resistor%20spacing%20to%20diff%20nd%20tap.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/DRC%20errors%20as%20geometrical%20construct.png)
@@ -159,9 +305,43 @@ Die height in Distance=671405-0=671405
 
 
 ### DAY_4
+Commands to open the custm inverter
+```
+//changing directory
+cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+
+// load inverter in magic tool
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+
+
+
+
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/dimension%20of%20grid.png)
+
+Command to run in tkcon for setting grid and locali layer
+```
+# Syntax for grid command
+help grid
+
+# Set grid values accordingly
+grid 0.46um 0.34um 0.23um 0.17um
+
+```
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/grid%20formation.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/port%20define%20and%20set%20value.png)
+
+## Generating lef file from the layout
+```
+//command
+lef write
+```
+
+
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/mag%20to%20lef%20file.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/config_tcl%20setup.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/lef%20to%20openflow.png)

@@ -84,6 +84,11 @@ exit
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/Global%26local%20variable%20in%20readme.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/core%20utl%20overriden%20by%20pdk%20specific%20configtcl.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/def%20file%20of%20floorplan.png)
+
+### Floorplan Def file gives the values of ..                                                  
+Die width in Distance=660685-0=660685                                                         
+Die height in Distance=671405-0=671405
+
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/floorplan%20variable.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/Magic%20opening.png)
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_2/magic%20placement.png)

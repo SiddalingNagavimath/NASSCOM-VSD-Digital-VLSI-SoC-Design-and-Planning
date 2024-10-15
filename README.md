@@ -15,7 +15,7 @@ Sky130 PDK (Process Design Kit)➡️ is an open-source PDK provided by SkyWater
 ## Inception of open-source EDA, OpenLANE and Sky130 PDK
 
 ![core and die](https://github.com/user-attachments/assets/2ca224f5-e409-45c3-89be-0999db08200a)
-### [Die,pad,core]
+### - Die,pad,core
 In VLSI design, the die pad core refers to the region on a semiconductor die that includes the pads used for electrical connections to the external environment. These pads serve as interfaces for power, ground, and signal lines, facilitating communication between the chip and other components or systems. Proper design of the die pad core is crucial for ensuring reliable connections, minimizing parasitic effects, and optimizing the overall performance of the integrated circuit. Additionally, the layout and arrangement of the die pads are key factors in achieving efficient packaging and heat dissipation.
 ______
 ![Screenshot](https://github.com/user-attachments/assets/8ab89589-2d39-43d7-b621-51d70e265a73)

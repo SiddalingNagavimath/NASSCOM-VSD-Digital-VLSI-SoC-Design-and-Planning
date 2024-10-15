@@ -20,6 +20,7 @@ In VLSI design, the die pad core refers to the region on a semiconductor die tha
 ______
 ![Screenshot](https://github.com/user-attachments/assets/8ab89589-2d39-43d7-b621-51d70e265a73)
 ### Flow-
+
 The image explains the flow of designing a RISC-V CPU:
 
 1. **RISC-V Code**: Starts with writing high-level C code (like the `swap` function), which is compiled into RISC-V assembly using tools like `riscv64-unknown-elf-objdump`.
@@ -44,7 +45,14 @@ ___
 
 OpenLane is an open-source ASIC design flow that automates the process of turning RTL designs into a final GDSII layout, ready for fabrication. It integrates various open-source tools to handle different stages of the flow, including synthesis, floorplanning, placement, routing, and verification.
 
-### Section 1 :-
+## Easy access for Sections
+- [SECTION 1](#Section-1)
+- [SECTION 2](#Section-2)
+- [SECTION 3](#Section-3)
+- [SECTION 4](#Section-4)
+- [SECTION 5](#Section-5)
+
+## Section 1 
 
 #### 1. Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
 
@@ -103,7 +111,7 @@ Screenshots of executed commands
 
 
 
-### Section-2
+## Section-2
 #### Good floorplan vs bad floorplan and introduction to library cells
 
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
@@ -188,7 +196,7 @@ ___
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(89).png)
 glimpse of Active region making process for 16 mask CMOS 
 
-### Section 3
+## Section 3
 #### Design library cell using Magic Layout and ngspice characterization
 
 ##### 1.Cloning the custom inverter standard cell design from github repo
@@ -387,7 +395,7 @@ ___
 an example of how the routing is done
 
 
-### Section-4
+## Section-4
 #### Pre-layout timing analysis and importance of good clock tree
 
 #### 1.Fix up small DRC errors and verify the design is ready to be inserted into our flow.
@@ -941,7 +949,7 @@ Pre Processed route Guides
 ___
 
 
-### Section-5
+## Section-5
 
 #### 1.Perform generation of Power Distribution Network (PDN) and explore the PDN layout.
 Commands to perform all necessary stages up until now

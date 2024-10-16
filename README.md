@@ -388,8 +388,6 @@ gvim .magicrc
 magic -d XR &
 ```
 
-![315554521-1b4cf68e-fa83-4d44-9b08-ca2b63ceb471](https://github.com/user-attachments/assets/b129f01e-98d3-4e95-b56f-a290ba931e46)
-
 #### Magic file created
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/magic%20file%20created.png)
 

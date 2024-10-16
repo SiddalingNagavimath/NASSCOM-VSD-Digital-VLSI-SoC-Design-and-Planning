@@ -55,7 +55,7 @@ OpenLane is an open-source ASIC design flow that automates the process of turnin
 ## Section 1 
 ### Inception of open-source EDA, OpenLANE and Sky130 PDK
 Tasks to be Completed:-
-- [TASK 1:-](Run'picorv32a'designsynthesisusingOpenLANEflowandgeneratenecessaryoutputs)
+- [TASK 1:-](Run-'picorv32a'-design-synthesis-using-OpenLANE-flow-and-generate-necessary-outputs)
 - [TASK 2:-](2.Calculating-Flop_Ratio(D_flipflop))
 
 ____

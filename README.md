@@ -55,42 +55,39 @@ OpenLane is an open-source ASIC design flow that automates the process of turnin
 ## Section 1 
 ### Inception of open-source EDA, OpenLANE and Sky130 PDK
 Tasks to be Completed:-
-- [TASK 1:-](Run-'picorv32a'-design-synthesis-using-OpenLANE-flow-and-generate-necessary-outputs)
-- [TASK 2:-](2.Calculating-Flop_Ratio(D_flipflop))
-
+1) Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
+2) Calculating Flop_Ratio(D_flipflop)
 ____
-1.Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
-2.Calculate the flop ratio.
 
 #### 1. Run 'picorv32a' design synthesis using OpenLANE flow and generate necessary outputs.
 
 Invoking the OpenLANE_flow and Run synthesis 
 ```
-# Change directory to openlane flow directory
+//Change directory to openlane flow directory
  cd Desktop/work/tools/openlane_working_dir/openlane
 
-# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e 
+//alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e 
 PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
-# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+//Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
 docker
 ```
 ```
-# Now that we have entered the OpenLANE flow contained docker sub-system we can invoke the OpenLANE flow in the Interactive mode using the following command
+//invoke the OpenLANE flow in the Interactive mode using the following command
 ./flow.tcl -interactive
 
-# Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+//input the required packages for proper functionality of the OpenLANE flow
 package require openlane 0.9
 
-# Now the OpenLANE flow is ready to run any design and initially we have to prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+//prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
 prep -design picorv32a
 
-# Now that the design is prepped and ready, we can run synthesis using following command
+//Now that the design is prepped and ready, we can run synthesis
 run_synthesis
 
-# Exit from OpenLANE flow
+//Exit from OpenLANE flow
 exit
 
-# Exit from OpenLANE flow docker sub-system
+//Exit from OpenLANE flow docker sub-system
 exit
 
 ```
@@ -121,16 +118,38 @@ Screenshots of executed commands
 
 ## Section-2
 #### Good floorplan vs bad floorplan and introduction to library cells
+Tasks to be completed
+1) Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
+2) Calculate the die area in microns from the values in floorplan def.
+3) Open a new terminal to load the generated floorplan definition in the Magic tool and explore the layout.
+4) Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
+5) Load generated placement def in magic tool and explore the placement.
 
 #### 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 ```
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(48).png)
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(49).png)
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(51).png)
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(53).png)
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(54).png)
-![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Concept_Corner/Screenshot%20(55).png)
+# Change directory to openlane flow directory
+ cd Desktop/work/tools/openlane_working_dir/openlane
 
+# alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e 
+PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+# Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+docker
+```
+```
+//invoke the OpenLANE flow in the Interactive mode using the following command
+./flow.tcl -interactive
+
+//input the required packages for proper functionality of the OpenLANE flow
+package require openlane 0.9
+
+//prep the design creating some necessary files and directories for running a specific design which in our case is 'picorv32a'
+prep -design picorv32a
+
+//Now that the design is prepped and ready, we can run synthesis
+run_synthesis
+
+// ready foe floorplan
+run_floorplan
 ```
 #### Increement or Decreement of Ioplace cells
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_3/incre_or_decree%20in%20size%20of%20ioplacecell.png)
@@ -172,6 +191,8 @@ Screenshot of Floorplan def file in magic
 //Command to run in openlane working flow
 run_placement
 ```
+![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_4/run%20placement%20complete.png)
+
 ### 5.Load generated placement def in magic tool and explore the placement.
 #### Commands to load placement def in magic in New terminal
 ```
@@ -184,6 +205,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ```
 #### screenshot of placement def in magic
 ![313492838-e703ef0b-3968-4132-a9c7-05b53f50b214](https://github.com/user-attachments/assets/8e0c512f-f8dc-410e-b1cd-df4d9a6f32b8)
+![313493144-54911138-f942-48b9-b4e9-61d741a4b5ac](https://github.com/user-attachments/assets/7054652c-a73a-4bbe-a722-fce0cba3910e)
 
 ```
 command to exit in the openflow
@@ -206,6 +228,13 @@ glimpse of Active region making process for 16 mask CMOS
 
 ## Section 3
 #### Design library cell using Magic Layout and ngspice characterization
+Tasks to be completed
+1) Cloning the custom inverter standard cell design from github repo
+2) Load the custom inverter layout in magic and explore.
+3) Spice extraction of inverter in magic
+4) Editing the spice model file for analysis through simulation.
+5) Post-layout ngspice simulation
+6) Identify issues in the DRC section of the old Magic tech file for the SkyWater process and resolve them.
 
 ##### 1.Cloning the custom inverter standard cell design from github repo
 ```
@@ -405,6 +434,21 @@ an example of how the routing is done
 
 ## Section-4
 #### Pre-layout timing analysis and importance of good clock tree
+Tasks to be Completed
+1) Fix up small DRC errors and verify the design is ready to be inserted into our flow
+2) Save the finalized layout with a custom name and then open it.
+3) Generating lef file from the layout
+4) Copy the new lef file to src directory
+5) Edit config.tcl to update the library file and incorporate the new LEF into the OpenLane flow
+6) To run openlane flow with newly added custom inverter cell
+7) Mitigate or eliminate the newly introduced violations caused by the custom inverter cell by adjusting the design parameters.
+8) Once synthesis has accepted our custom inverter, we can proceed with the floorplan and placement, and verify that the cell is integrated into the PnR flow.
+9) Perform post-synthesis timing analysis using the OpenSTA tool.
+10) Make timing ECO fixes to remove all violations.
+11) Replace the old netlist with the new netlist generated after the timing ECO fix, and then implement the floorplan, placement, and clock tree synthesis (CTS).
+12) Post-CTS OpenROAD timing analysis.
+13) Explore post-CTS OpenROAD timing analysis by removing 'sky130_fd_sc_hd__clkbuf_1' cell from clock buffer list variable 'CTS_CLK_BUFFER_LIST'.
+____
 
 #### 1.Fix up small DRC errors and verify the design is ready to be inserted into our flow.
 #### Commands to open the custom inverter
@@ -958,6 +1002,13 @@ ___
 
 
 ## Section-5
+
+Topics to be Completed
+1) Perform generation of Power Distribution Network (PDN) and explore the PDN layout
+2) Perfrom detailed routing using TritonRoute and explore the routed layout.
+3) Commands to load routed def in magic in other terminal
+4) Post-Route OpenSTA timing analysis with the extracted parasitics of the route.
+___
 
 #### 1.Perform generation of Power Distribution Network (PDN) and explore the PDN layout.
 Commands to perform all necessary stages up until now

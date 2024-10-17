@@ -1152,8 +1152,10 @@ exit
 ![Screenshot](https://github.com/SiddalingNagavimath/NASSCOM-VSD-Digital-VLSI-SoC-Design-and-Planning/blob/main/Lab_works/Day_5/open%20sta%20timing%20analysis.png)
 
 
-
-
+## Acknowledgements
+- [Kunal Ghosh](https://github.com/kunalg123) Co-founder, VSD Corp. Pvt. Ltd.
+- [Nickson P Jose](https://github.com/nickson-jose) Physical Design Engineer, Intel Corporation.
+- [R. Timothy Edwards](https://github.com/RTimothyEdwards) Senior Vice President of Analog and Design, efabless Corporation.
 
 
 
